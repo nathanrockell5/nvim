@@ -11,15 +11,22 @@ return {
   },
   lazy = false,
   keys = {
+    { '<leader>e', ':Neotree toggle left<CR>', desc = 'Toggle File Explorer', silent = true },
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
     filesystem = {
+      follow_current_file = { enabled = true },
+      hijack_netrw_behaviour = 'open_default',
       window = {
         mappings = {
           ['\\'] = 'close_window',
         },
       },
+    },
+    window = {
+      position = 'left',
+      width = 40,
     },
   },
 }
